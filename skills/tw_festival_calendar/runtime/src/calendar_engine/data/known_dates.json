@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {"festival_id": "mid_autumn", "solar_date": "2026-09-25"},
+    {"festival_id": "dragon_boat", "solar_date": "2026-06-19"}
+  ]
+}
+

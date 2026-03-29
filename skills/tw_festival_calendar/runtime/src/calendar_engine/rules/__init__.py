@@ -1,0 +1,2 @@
+"""Festival rule evaluation package."""
+

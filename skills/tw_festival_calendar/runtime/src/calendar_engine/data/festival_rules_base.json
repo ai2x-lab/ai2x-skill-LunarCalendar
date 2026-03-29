@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "rules": [
+    {
+      "id": "chinese_new_year",
+      "name_zh": "春節",
+      "name_en": "Chinese New Year",
+      "type": "traditional",
+      "category": "major_traditional",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 1, "day": 1, "leap_month": false},
+      "tags": ["taiwan", "major"],
+      "notes": ["Lunar new year first day."]
+    },
+    {
+      "id": "tiangong_birthday",
+      "name_zh": "天公生",
+      "name_en": "Jade Emperor Birthday",
+      "type": "religious",
+      "category": "buddhist_taoist",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 1, "day": 9, "leap_month": false},
+      "tags": ["taoist"],
+      "notes": ["Taiwan folk worship day."]
+    },
+    {
+      "id": "lantern_festival",
+      "name_zh": "元宵節",
+      "name_en": "Lantern Festival",
+      "type": "traditional",
+      "category": "lunar_1_15",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 1, "day": 15, "leap_month": false},
+      "tags": ["taiwan", "lantern"],
+      "notes": []
+    },
+    {
+      "id": "qingming",
+      "name_zh": "清明",
+      "name_en": "Qingming Festival",
+      "type": "seasonal",
+      "category": "solar_term",
+      "rule_type": "solar_term",
+      "rule": {"term": "清明"},
+      "tags": ["ancestor_worship"],
+      "notes": []
+    },
+    {
+      "id": "dragon_boat",
+      "name_zh": "端午節",
+      "name_en": "Dragon Boat Festival",
+      "type": "traditional",
+      "category": "major_traditional",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 5, "day": 5, "leap_month": false},
+      "tags": ["taiwan"],
+      "notes": []
+    },
+    {
+      "id": "qixi",
+      "name_zh": "七夕",
+      "name_en": "Qixi Festival",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 7, "day": 7, "leap_month": false},
+      "tags": ["folk"],
+      "notes": []
+    },
+    {
+      "id": "ghost_festival",
+      "name_zh": "中元節",
+      "name_en": "Ghost Festival",
+      "type": "religious",
+      "category": "buddhist_taoist",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 7, "day": 15, "leap_month": false},
+      "tags": ["folk", "religious"],
+      "notes": []
+    },
+    {
+      "id": "mid_autumn",
+      "name_zh": "中秋節",
+      "name_en": "Mid-Autumn Festival",
+      "type": "traditional",
+      "category": "major_traditional",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 8, "day": 15, "leap_month": false},
+      "tags": ["taiwan", "family"],
+      "notes": []
+    },
+    {
+      "id": "double_ninth",
+      "name_zh": "重陽節",
+      "name_en": "Double Ninth Festival",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {"month": 9, "day": 9, "leap_month": false},
+      "tags": ["folk"],
+      "notes": []
+    },
+    {
+      "id": "winter_solstice",
+      "name_zh": "冬至",
+      "name_en": "Winter Solstice",
+      "type": "seasonal",
+      "category": "solar_term",
+      "rule_type": "solar_term",
+      "rule": {"term": "冬至"},
+      "tags": ["solar_term"],
+      "notes": []
+    }
+  ]
+}
+

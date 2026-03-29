@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FestivalRecord",
+  "type": "object",
+  "required": ["id", "name_zh", "type", "category", "source_rule", "tags"],
+  "properties": {
+    "id": {"type": "string"},
+    "name_zh": {"type": "string"},
+    "name_en": {"type": ["string", "null"]},
+    "type": {"type": "string"},
+    "category": {"type": "string"},
+    "source_rule": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

@@ -1,0 +1,26 @@
+﻿{
+  "status": "ok",
+  "action": "search_festival",
+  "data": {
+    "year": 2026,
+    "keyword": "中秋",
+    "mode": "contains",
+    "items": [
+      {
+        "solar_date": "2026-09-25",
+        "festivals": [
+          {
+            "id": "mid_autumn",
+            "name_zh": "中秋節",
+            "name_en": "Mid-Autumn Festival"
+          }
+        ]
+      }
+    ],
+    "suggestions": []
+  },
+  "meta": {
+    "schema_version": "1.0.0"
+  },
+  "errors": []
+}

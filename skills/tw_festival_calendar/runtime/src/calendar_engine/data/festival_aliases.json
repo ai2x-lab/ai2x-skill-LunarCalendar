@@ -1,0 +1,9 @@
+﻿{
+  "schema_version": "1.0.0",
+  "aliases": {
+    "mid_autumn": ["中秋", "八月十五", "月娘節", "仲秋"],
+    "chinese_new_year": ["過年", "新年", "農曆新年"],
+    "ghost_festival": ["中元", "普渡"],
+    "dragon_boat": ["端午", "五日節"]
+  }
+}

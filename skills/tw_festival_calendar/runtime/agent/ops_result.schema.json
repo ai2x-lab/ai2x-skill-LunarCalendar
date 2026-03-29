@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OperationResult",
+  "type": "object",
+  "required": ["status", "action", "data", "meta", "errors"],
+  "properties": {
+    "status": {"enum": ["ok", "error"]},
+    "action": {"type": "string"},
+    "data": {"type": "object"},
+    "meta": {
+      "type": "object",
+      "required": ["schema_version", "timestamp"],
+      "properties": {
+        "schema_version": {"type": "string"},
+        "timestamp": {"type": "string"},
+        "regenerated_years": {"type": "array", "items": {"type": "integer"}}
+      }
+    },
+    "errors": {"type": "array", "items": {"type": "string"}}
+  }
+}
+
