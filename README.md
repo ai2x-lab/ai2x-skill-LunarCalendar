@@ -46,6 +46,37 @@ Start from:
 
 ---
 
+## 工具指令集（twcal）
+
+### 查詢指令
+
+- `twcal today --json`
+- `twcal lookup-date YYYY-MM-DD --json`
+- `twcal lookup-lunar --year Y --month M --day D [--leap-month] --json`
+- `twcal next-festival --from YYYY-MM-DD --json`
+- `twcal list-festivals --year Y [--month M] [--type T] [--ignore-lunar-1-15] [--ignore-religious] --json`
+- `twcal search-festival --year Y --name KW [--mode exact|contains|fuzzy] --json`
+- `twcal range --start YYYY-MM-DD --end YYYY-MM-DD --json`
+
+### 快取維護指令
+
+- `twcal rebuild-cache --years 2026,2027 --json`
+- `twcal check-cache [--year Y] --json`
+
+### 私有節日管理（使用者可自行新增/刪除）
+
+- 新增私有節日：
+  - `twcal add-festival --id ID --name-zh NAME --rule-type TYPE --rule '{...}' --rebuild auto --json`
+- 刪除私有節日：
+  - `twcal remove-festival --id ID --rebuild auto --json`
+- 列出私有節日：
+  - `twcal list-custom-festivals --json`
+
+> 私有節日會寫入：
+> `skills/tw_festival_calendar/runtime/src/calendar_engine/data/festival_rules_user.json`
+
+---
+
 ## 相關文件
 
 - Quickstart: `skills/tw_festival_calendar/docs/quickstart.md`
