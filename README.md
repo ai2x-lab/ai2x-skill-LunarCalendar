@@ -2,7 +2,7 @@
 
 `ai2x-skill-LunarCalendar` 是一個給 Agent 使用的「台灣節慶 / 農民曆查詢與規則化推理」技能集合。
 
-它的目標是讓 Jarvis / Lumi / Scribe 這類助理，在對話中可以：
+它的目標是讓 AI Agent 助理，在對話中可以：
 
 - 以台灣常用名稱查節日（含別名）
 - 解析農曆/國曆節慶規則（固定日、週次規則、節氣關聯）
@@ -51,3 +51,4 @@ Start from:
 - Quickstart: `skills/tw_festival_calendar/docs/quickstart.md`
 - Command reference: `skills/tw_festival_calendar/docs/command-reference.md`
 - Agent integration: `skills/tw_festival_calendar/docs/agent-integration.md`
+
