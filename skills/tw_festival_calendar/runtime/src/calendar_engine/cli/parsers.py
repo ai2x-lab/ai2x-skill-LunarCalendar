@@ -83,5 +83,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("list-custom-festivals").add_argument("--json", action="store_true")
 
+    lookup_story = sub.add_parser("lookup-story")
+    lookup_story.add_argument("--id", required=True)
+    lookup_story.add_argument("--json", action="store_true")
+
+    search_story = sub.add_parser("search-story")
+    search_story.add_argument("--keyword", required=True)
+    search_story.add_argument("--json", action="store_true")
+
     return parser
 

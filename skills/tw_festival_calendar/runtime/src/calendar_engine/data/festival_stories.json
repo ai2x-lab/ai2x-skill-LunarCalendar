@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "stories": [
+    {
+      "id": "chinese_new_year",
+      "name_zh": "春節",
+      "summary": "春節是農曆歲首，核心意義是除舊布新、闔家團圓與迎福納祥，習俗包含貼春聯、守歲、拜年與發壓歲錢。",
+      "keywords": [
+        "過年",
+        "團圓",
+        "拜年",
+        "壓歲錢"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/5",
+        "https://www.lesson.com.tw/feature/list?page=1"
+      ],
+      "markdown_path": "stories/chinese_new_year.md"
+    },
+    {
+      "id": "qingming",
+      "name_zh": "清明",
+      "summary": "清明兼具節氣與節日意義，常見祭祖掃墓、整修墓地與慎終追遠，是家族記憶與倫理傳承的重要時點。",
+      "keywords": [
+        "掃墓",
+        "祭祖",
+        "慎終追遠"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/9",
+        "https://www.lesson.com.tw/feature/list?page=1"
+      ],
+      "markdown_path": "stories/qingming.md"
+    },
+    {
+      "id": "dragon_boat",
+      "name_zh": "端午節",
+      "summary": "端午常見習俗包含包粽、掛艾草菖蒲與賽龍舟，兼具驅邪避疫與紀念文化意涵。",
+      "keywords": [
+        "粽子",
+        "龍舟",
+        "艾草",
+        "菖蒲"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/10",
+        "https://www.lesson.com.tw/feature/list?page=1"
+      ],
+      "markdown_path": "stories/dragon_boat.md"
+    },
+    {
+      "id": "ghost_festival",
+      "name_zh": "中元節",
+      "summary": "中元節俗稱七月半，常見普度、祭祀與施食儀式，反映慎終追遠與悲憫共享的民俗精神。",
+      "keywords": [
+        "七月半",
+        "祭祀",
+        "普渡",
+        "普度",
+        "地官大帝"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/13",
+        "https://www.lesson.com.tw/feature/list?page=2"
+      ],
+      "markdown_path": "stories/ghost_festival.md"
+    },
+    {
+      "id": "mid_autumn",
+      "name_zh": "中秋節",
+      "summary": "中秋節在農曆八月十五，象徵月圓人團圓，習俗常見賞月、團聚與地方特色活動。",
+      "keywords": [
+        "月圓",
+        "團圓",
+        "賞月",
+        "博狀元餅"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/14",
+        "https://www.lesson.com.tw/feature/list?page=2"
+      ],
+      "markdown_path": "stories/mid_autumn.md"
+    },
+    {
+      "id": "double_ninth",
+      "name_zh": "重陽節",
+      "summary": "重陽節在農曆九月初九，傳統有登高、敬老與祈福延壽等意涵，現代也常作為敬老關懷時點。",
+      "keywords": [
+        "敬老",
+        "登高",
+        "重九"
+      ],
+      "source_refs": [
+        "https://www.lesson.com.tw/feature/detail/15",
+        "https://www.lesson.com.tw/feature/list?page=2"
+      ],
+      "markdown_path": "stories/double_ninth.md"
+    }
+  ]
+}

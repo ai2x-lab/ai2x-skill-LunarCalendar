@@ -43,6 +43,7 @@ class LookupService:
         self.cache_builder = CacheBuilder(evaluator, self.store, timezone_name)
         self.cache_service = CacheService(self.cache_builder, self.store)
         self.festival_service = FestivalService(alias_map=self._load_alias_map(DATA_DIR / "festival_aliases.json"))
+        self.story_map = self._load_story_map(DATA_DIR / "festival_stories.json")
         self.timezone_name = timezone_name
 
     @classmethod
@@ -194,6 +195,31 @@ class LookupService:
             {"regenerated_years": rebuilt},
         )
 
+    def lookup_story(self, festival_id: str) -> OperationResult:
+        """Lookup festival story by festival id."""
+        record = self.story_map.get(festival_id)
+        if not record:
+            return self._ok("lookup_story", {"id": festival_id, "record": None}, {"found": False})
+        return self._ok("lookup_story", {"id": festival_id, "record": record}, {"found": True})
+
+    def search_story(self, keyword: str) -> OperationResult:
+        """Search festival stories by keyword/id/name."""
+        kw = (keyword or "").strip().lower()
+        items: list[dict[str, Any]] = []
+        for rec in self.story_map.values():
+            hay = " ".join(
+                [
+                    str(rec.get("id", "")),
+                    str(rec.get("name_zh", "")),
+                    str(rec.get("summary", "")),
+                    " ".join(str(x) for x in rec.get("keywords", []) or []),
+                ]
+            ).lower()
+            if kw and kw in hay:
+                items.append(rec)
+        items.sort(key=lambda x: str(x.get("id", "")))
+        return self._ok("search_story", {"keyword": keyword, "items": items}, {"count": len(items)})
+
     def _ensure_years_for_date(self, d: date) -> None:
         self.cache_service.ensure_years([d.year])
 
@@ -234,6 +260,30 @@ class LookupService:
             if isinstance(value, list):
                 result[str(key)] = [str(item) for item in value]
         return result
+
+    def _load_story_map(self, path: Path) -> dict[str, dict[str, Any]]:
+        if not path.exists():
+            return {}
+        payload = json.loads(path.read_text(encoding="utf-8-sig"))
+        raw = payload.get("stories", [])
+        if not isinstance(raw, list):
+            return {}
+        out: dict[str, dict[str, Any]] = {}
+        for item in raw:
+            if not isinstance(item, dict):
+                continue
+            sid = str(item.get("id", "")).strip()
+            if not sid:
+                continue
+            out[sid] = {
+                "id": sid,
+                "name_zh": item.get("name_zh", ""),
+                "summary": item.get("summary", ""),
+                "keywords": item.get("keywords", []) or [],
+                "source_refs": item.get("source_refs", []) or [],
+                "markdown_path": item.get("markdown_path", ""),
+            }
+        return out
 
 
 def default_rule_template(

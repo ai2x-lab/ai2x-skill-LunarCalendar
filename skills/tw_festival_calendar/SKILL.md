@@ -45,6 +45,8 @@ twcal search-festival --year 2026 --name 仲秋 --mode fuzzy --json
 twcal range --start 2026-08-01 --end 2026-10-01 --json
 twcal list-festivals --year 2026 --ignore-lunar-1-15 --json
 twcal list-festivals --year 2026 --ignore-religious --json
+twcal lookup-story --id mid_autumn --json
+twcal search-story --keyword 普渡 --json
 ```
 
 ## Custom Festival Lifecycle
@@ -59,6 +61,8 @@ twcal remove-festival --id temple_fair --rebuild auto --json
 - `src/calendar_engine/data/festival_rules_base.json`
 - `src/calendar_engine/data/festival_rules_user.json`
 - `src/calendar_engine/data/festival_aliases.json`
+- `src/calendar_engine/data/festival_stories.json`
+- `src/calendar_engine/data/stories/*.md`
 
 ## Output Contract
 

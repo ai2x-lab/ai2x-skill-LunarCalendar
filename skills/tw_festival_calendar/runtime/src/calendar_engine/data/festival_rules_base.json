@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "rules": [
     {
       "id": "chinese_new_year",
@@ -8,9 +8,18 @@
       "type": "traditional",
       "category": "major_traditional",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 1, "day": 1, "leap_month": false},
-      "tags": ["taiwan", "major"],
-      "notes": ["Lunar new year first day."]
+      "rule": {
+        "month": 1,
+        "day": 1,
+        "leap_month": false
+      },
+      "tags": [
+        "taiwan",
+        "major"
+      ],
+      "notes": [
+        "Lunar new year first day."
+      ]
     },
     {
       "id": "tiangong_birthday",
@@ -19,9 +28,17 @@
       "type": "religious",
       "category": "buddhist_taoist",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 1, "day": 9, "leap_month": false},
-      "tags": ["taoist"],
-      "notes": ["Taiwan folk worship day."]
+      "rule": {
+        "month": 1,
+        "day": 9,
+        "leap_month": false
+      },
+      "tags": [
+        "taoist"
+      ],
+      "notes": [
+        "Taiwan folk worship day."
+      ]
     },
     {
       "id": "lantern_festival",
@@ -30,8 +47,15 @@
       "type": "traditional",
       "category": "lunar_1_15",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 1, "day": 15, "leap_month": false},
-      "tags": ["taiwan", "lantern"],
+      "rule": {
+        "month": 1,
+        "day": 15,
+        "leap_month": false
+      },
+      "tags": [
+        "taiwan",
+        "lantern"
+      ],
       "notes": []
     },
     {
@@ -41,8 +65,12 @@
       "type": "seasonal",
       "category": "solar_term",
       "rule_type": "solar_term",
-      "rule": {"term": "清明"},
-      "tags": ["ancestor_worship"],
+      "rule": {
+        "term": "清明"
+      },
+      "tags": [
+        "ancestor_worship"
+      ],
       "notes": []
     },
     {
@@ -52,8 +80,14 @@
       "type": "traditional",
       "category": "major_traditional",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 5, "day": 5, "leap_month": false},
-      "tags": ["taiwan"],
+      "rule": {
+        "month": 5,
+        "day": 5,
+        "leap_month": false
+      },
+      "tags": [
+        "taiwan"
+      ],
       "notes": []
     },
     {
@@ -63,8 +97,14 @@
       "type": "traditional",
       "category": "folk_custom",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 7, "day": 7, "leap_month": false},
-      "tags": ["folk"],
+      "rule": {
+        "month": 7,
+        "day": 7,
+        "leap_month": false
+      },
+      "tags": [
+        "folk"
+      ],
       "notes": []
     },
     {
@@ -74,8 +114,15 @@
       "type": "religious",
       "category": "buddhist_taoist",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 7, "day": 15, "leap_month": false},
-      "tags": ["folk", "religious"],
+      "rule": {
+        "month": 7,
+        "day": 15,
+        "leap_month": false
+      },
+      "tags": [
+        "folk",
+        "religious"
+      ],
       "notes": []
     },
     {
@@ -85,8 +132,15 @@
       "type": "traditional",
       "category": "major_traditional",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 8, "day": 15, "leap_month": false},
-      "tags": ["taiwan", "family"],
+      "rule": {
+        "month": 8,
+        "day": 15,
+        "leap_month": false
+      },
+      "tags": [
+        "taiwan",
+        "family"
+      ],
       "notes": []
     },
     {
@@ -96,8 +150,14 @@
       "type": "traditional",
       "category": "folk_custom",
       "rule_type": "lunar_fixed",
-      "rule": {"month": 9, "day": 9, "leap_month": false},
-      "tags": ["folk"],
+      "rule": {
+        "month": 9,
+        "day": 9,
+        "leap_month": false
+      },
+      "tags": [
+        "folk"
+      ],
       "notes": []
     },
     {
@@ -107,10 +167,122 @@
       "type": "seasonal",
       "category": "solar_term",
       "rule_type": "solar_term",
-      "rule": {"term": "冬至"},
-      "tags": ["solar_term"],
+      "rule": {
+        "term": "冬至"
+      },
+      "tags": [
+        "solar_term"
+      ],
+      "notes": []
+    },
+    {
+      "id": "new_year_eve",
+      "name_zh": "除夕",
+      "name_en": "Lunar New Year's Eve",
+      "type": "traditional",
+      "category": "major_traditional",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 12,
+        "day": 30,
+        "leap_month": false
+      },
+      "tags": [
+        "taiwan",
+        "reunion"
+      ],
+      "notes": [
+        "If lunar month has only 29 days, fallback by known dates."
+      ]
+    },
+    {
+      "id": "shangsi",
+      "name_zh": "上巳節",
+      "name_en": "Shangsi Festival",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 3,
+        "day": 3,
+        "leap_month": false
+      },
+      "tags": [
+        "folk"
+      ],
+      "notes": []
+    },
+    {
+      "id": "ghost_gate_open",
+      "name_zh": "鬼門開",
+      "name_en": "Ghost Month Opening",
+      "type": "religious",
+      "category": "buddhist_taoist",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 7,
+        "day": 1,
+        "leap_month": false
+      },
+      "tags": [
+        "folk",
+        "religious"
+      ],
+      "notes": []
+    },
+    {
+      "id": "laba",
+      "name_zh": "臘八節",
+      "name_en": "Laba Festival",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 12,
+        "day": 8,
+        "leap_month": false
+      },
+      "tags": [
+        "folk",
+        "buddhist"
+      ],
+      "notes": []
+    },
+    {
+      "id": "tail_teeth",
+      "name_zh": "尾牙",
+      "name_en": "Weiya",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 12,
+        "day": 16,
+        "leap_month": false
+      },
+      "tags": [
+        "business",
+        "earth_god"
+      ],
+      "notes": []
+    },
+    {
+      "id": "send_gods",
+      "name_zh": "送神日",
+      "name_en": "Kitchen God Send-off",
+      "type": "traditional",
+      "category": "folk_custom",
+      "rule_type": "lunar_fixed",
+      "rule": {
+        "month": 12,
+        "day": 24,
+        "leap_month": false
+      },
+      "tags": [
+        "folk",
+        "year_end"
+      ],
       "notes": []
     }
   ]
 }
-

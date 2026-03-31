@@ -90,6 +90,10 @@ def main() -> None:
     elif args.command == "list-custom-festivals":
         data = read_json(DATA_DIR / "festival_rules_user.json") if (DATA_DIR / "festival_rules_user.json").exists() else {"rules": []}
         result = service._ok("list_custom_festivals", {"items": data.get("rules", [])}, {})
+    elif args.command == "lookup-story":
+        result = service.lookup_story(args.id)
+    elif args.command == "search-story":
+        result = service.search_story(args.keyword)
     else:
         raise ValueError("Unknown command")
 

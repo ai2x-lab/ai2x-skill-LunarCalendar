@@ -9,6 +9,21 @@
 - `twcal list-festivals --year Y [--month M] [--type T] [--ignore-lunar-1-15] [--ignore-religious] --json`
 - `twcal search-festival --year Y --name KW [--mode exact|contains|fuzzy] --json`
 - `twcal range --start YYYY-MM-DD --end YYYY-MM-DD --json`
+- `twcal lookup-story --id FESTIVAL_ID --json`
+- `twcal search-story --keyword KW --json`
+
+## Story Query
+
+- `twcal lookup-story --id mid_autumn --json`
+- `twcal search-story --keyword 普渡 --json`
+
+Story result fields:
+- `id`
+- `name_zh`
+- `summary`
+- `keywords`
+- `source_refs`
+- `markdown_path`
 
 ## Cache
 

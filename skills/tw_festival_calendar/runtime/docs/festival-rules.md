@@ -1,9 +1,11 @@
 # Festival Rule Schema
 
-Rule file examples:
+Rule/data file examples:
 
-- `src/calendar_engine/data/festival_rules_base.json`
-- `src/calendar_engine/data/festival_rules_user.json`
+- `src/calendar_engine/data/festival_rules_base.json` (日期規則)
+- `src/calendar_engine/data/festival_rules_user.json` (使用者擴充規則)
+- `src/calendar_engine/data/festival_stories.json` (典故摘要/來源/關鍵字)
+- `src/calendar_engine/data/stories/*.md` (可選長文典故)
 
 Fields:
 
