@@ -11,6 +11,8 @@
 - `twcal range --start YYYY-MM-DD --end YYYY-MM-DD --json`
 - `twcal lookup-story --id FESTIVAL_ID --json`
 - `twcal search-story --keyword KW --json`
+- `twcal hour-fortune --date YYYY-MM-DD --json`
+- `twcal hour-fortune --datetime YYYY-MM-DDTHH:MM --json`
 
 ## Story Query
 

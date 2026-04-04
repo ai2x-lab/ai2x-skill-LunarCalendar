@@ -94,6 +94,14 @@ def main() -> None:
         result = service.lookup_story(args.id)
     elif args.command == "search-story":
         result = service.search_story(args.keyword)
+    elif args.command == "hour-fortune":
+        if args.target_datetime:
+            target = datetime.fromisoformat(args.target_datetime)
+        elif args.date:
+            target = datetime.combine(parse_iso_date(args.date), datetime.now().time())
+        else:
+            target = datetime.now()
+        result = service.hour_fortune(target)
     else:
         raise ValueError("Unknown command")
 

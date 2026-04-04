@@ -91,5 +91,10 @@ def build_parser() -> argparse.ArgumentParser:
     search_story.add_argument("--keyword", required=True)
     search_story.add_argument("--json", action="store_true")
 
+    hour_fortune = sub.add_parser("hour-fortune")
+    hour_fortune.add_argument("--date", help="YYYY-MM-DD")
+    hour_fortune.add_argument("--datetime", dest="target_datetime", help="YYYY-MM-DDTHH:MM")
+    hour_fortune.add_argument("--json", action="store_true")
+
     return parser
 

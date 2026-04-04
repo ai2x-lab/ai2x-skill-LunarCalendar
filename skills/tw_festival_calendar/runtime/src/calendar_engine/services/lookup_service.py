@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from datetime import date, datetime
+
+from lunar_python import Solar
 from pathlib import Path
 from typing import Any
 import json
@@ -219,6 +221,52 @@ class LookupService:
                 items.append(rec)
         items.sort(key=lambda x: str(x.get("id", "")))
         return self._ok("search_story", {"keyword": keyword, "items": items}, {"count": len(items)})
+
+    def hour_fortune(self, target: datetime) -> OperationResult:
+        """Compute hour-level fortune (時辰吉凶) for a date/datetime."""
+        solar = Solar.fromDate(target)
+        lunar = solar.getLunar()
+        times = lunar.getTimes()
+
+        items: list[dict[str, Any]] = []
+        for t in times:
+            items.append(
+                {
+                    "ganzhi": t.toString(),
+                    "branch": t.getZhi(),
+                    "time_range": f"{t.getMinHm()}-{t.getMaxHm()}",
+                    "tian_shen": t.getTianShen(),
+                    "tian_shen_type": t.getTianShenType(),
+                    "luck": t.getTianShenLuck(),
+                    "yi": t.getYi(),
+                    "ji": t.getJi(),
+                    "chong": t.getChongDesc(),
+                    "sha": t.getSha(),
+                }
+            )
+
+        now_hm = target.strftime("%H:%M")
+        current = None
+        for it in items:
+            s, e = it["time_range"].split("-")
+            if s <= now_hm <= e:
+                current = it
+                break
+
+        return self._ok(
+            "hour_fortune",
+            {
+                "date": target.strftime("%Y-%m-%d"),
+                "datetime": target.isoformat(),
+                "lunar": lunar.toString(),
+                "day_ganzhi": lunar.getDayInGanZhi(),
+                "day_yi": lunar.getDayYi(),
+                "day_ji": lunar.getDayJi(),
+                "current_hour": current,
+                "hours": items,
+            },
+            {},
+        )
 
     def _ensure_years_for_date(self, d: date) -> None:
         self.cache_service.ensure_years([d.year])

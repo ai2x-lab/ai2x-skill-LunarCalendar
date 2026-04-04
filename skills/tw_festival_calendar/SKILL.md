@@ -47,6 +47,7 @@ twcal list-festivals --year 2026 --ignore-lunar-1-15 --json
 twcal list-festivals --year 2026 --ignore-religious --json
 twcal lookup-story --id mid_autumn --json
 twcal search-story --keyword 普渡 --json
+twcal hour-fortune --date 2026-04-04 --json
 ```
 
 ## Custom Festival Lifecycle
