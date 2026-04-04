@@ -27,6 +27,15 @@ Story result fields:
 - `source_refs`
 - `markdown_path`
 
+Hour fortune result fields:
+- `date`
+- `lunar`
+- `day_ganzhi`
+- `day_yi`
+- `day_ji`
+- `current_hour`
+- `hours[]` (含 `time_range` / `luck` / `yi` / `ji` / `tian_shen` / `chong` / `sha`)
+
 ## Cache
 
 - `twcal rebuild-cache --years 2026,2027 --json`

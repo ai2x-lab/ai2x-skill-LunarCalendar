@@ -10,7 +10,7 @@ cwd: skills/tw_festival_calendar/runtime
 
 ## Purpose
 
-Use this skill to answer Taiwan lunar calendar and traditional festival questions through local CLI commands.
+Use this skill to answer Taiwan lunar calendar and traditional festival questions through local CLI commands, including hour-level fortune queries for scenarios like祭祀時段建議.
 
 ## Workspace And Runtime
 

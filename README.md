@@ -8,6 +8,7 @@
 - 解析農曆/國曆節慶規則（固定日、週次規則、節氣關聯）
 - 提供可被程式/Agent 消費的結構化結果（JSON）
 - 支援快取與測試，方便部署到自動化流程
+- 支援「時辰吉凶」即時查詢（含宜/忌），可用於祭祀時段建議
 
 ---
 
@@ -40,6 +41,7 @@ Start from:
 
 - 節日查詢（名稱、別名）
 - 節日日期推算（農曆轉換、節氣、週次型規則）
+- 時辰吉凶查詢（12 時辰宜/忌、黃道/黑道、沖煞）
 - 結果輸出 schema（便於 Agent/MCP 整合）
 - 年度快取（降低重複計算成本）
 - 測試覆蓋（保障規則正確性）
@@ -57,6 +59,17 @@ Start from:
 - `twcal list-festivals --year Y [--month M] [--type T] [--ignore-lunar-1-15] [--ignore-religious] --json`
 - `twcal search-festival --year Y --name KW [--mode exact|contains|fuzzy] --json`
 - `twcal range --start YYYY-MM-DD --end YYYY-MM-DD --json`
+- `twcal hour-fortune --date YYYY-MM-DD --json`
+- `twcal hour-fortune --datetime YYYY-MM-DDTHH:MM --json`
+
+### 時辰吉凶 / 祭祀查詢範例
+
+- 查明日各時辰吉凶：
+  - `twcal hour-fortune --date 2026-04-05 --json`
+- 指定時點查當下時辰：
+  - `twcal hour-fortune --datetime 2026-04-05T08:30 --json`
+
+> 建議流程：先由工具回傳結構化 `hours`，再交給 Agent 做口語化建議（例如祭祀建議時段）。
 
 ### 快取維護指令
 
