@@ -1,16 +1,13 @@
 ﻿---
 name: tw-festival-calendar
 description: Query Taiwan lunar/festival data locally via twcal CLI with deterministic JSON outputs.
-version: 0.1.0
-entrypoint: twcal
-cwd: skills/tw_festival_calendar/runtime
 ---
 
 # TW Festival Calendar Skill
 
 ## Purpose
 
-Use this skill to answer Taiwan lunar calendar and traditional festival questions through local CLI commands, including hour-level fortune queries for scenarios like祭祀時段建議.
+Use this skill to answer Taiwan lunar calendar and traditional festival questions through local CLI commands.
 
 ## Workspace And Runtime
 
@@ -47,7 +44,6 @@ twcal list-festivals --year 2026 --ignore-lunar-1-15 --json
 twcal list-festivals --year 2026 --ignore-religious --json
 twcal lookup-story --id mid_autumn --json
 twcal search-story --keyword 普渡 --json
-twcal hour-fortune --date 2026-04-04 --json
 ```
 
 ## Custom Festival Lifecycle
